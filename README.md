@@ -53,3 +53,50 @@ Step 10. Create a style.css in root of your project.
 Step 11. Run your first demo app. 
 	
  	$ npm start
+
+#### For Routing Setup follow the below Steps 
+
+
+Add a <base> element to the index.html as the first child in the <head> tag to tell the router how to compose navigation URLs.
+	 <base href=“/“>
+
+Step 2.  Every application has a router. When we hit the new url, router looks for in Route config and display the content of component for which route is mapped. We need to configure the router, we bootstrap our app with an array of routes that is provided by RouteModule.forRoot function.
+
+create a routing file in your app directory 
+	app/app.routing.ts
+
+and write the code
+
+
+import { Routes, RouterModule }   from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+const appRoutes: Routes = [
+    {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
+        path: 'about',
+        component: AboutComponent,
+        data: {
+            title: 'About angular 2'
+        }
+    }
+];
+
+export const appRoutingProviders: any[] = [
+
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+
+Step 3. We need to export  the routing constant  we can import into our app.module.ts see the app.module.ts file 
+
+Step 4. Configure the router outlet where the contents are fetched. 
+	see app/app.component.html
+Step 5. Everything is done run the app start the server if not runnnig.
+ 	$ npm start
+

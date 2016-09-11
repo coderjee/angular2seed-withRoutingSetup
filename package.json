@@ -1,6 +1,9 @@
 {
   "name": "angular2-seed",
   "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/codershubhamverma/angular2-seed/"
+  },
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
