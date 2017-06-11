@@ -67,7 +67,7 @@ create a routing file in your app directory
 
 and write the code
 
-
+```
 import { Routes, RouterModule }   from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 
@@ -90,9 +90,8 @@ const appRoutes: Routes = [
 export const appRoutingProviders: any[] = [
 
 ];
-
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
-
+```
 Step 3. We need to export  the routing constant  we can import into our app.module.ts see the app.module.ts file 
 
 Step 4. Configure the router outlet where the contents are fetched. 
